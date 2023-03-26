@@ -6,6 +6,7 @@ let generateShop=()=>{
     return(shop.innerHTML=shopItems.map((x)=>{
         let search=basket.find((y)=> y.id===x.id) || []
         return `
+        {% load static %}
     <div id=product-id-${x.id} class="item">
         <img width="220" height="240" src="${x.img}" alt="">
         <div class="details">
@@ -22,7 +23,8 @@ let generateShop=()=>{
                 </div>
             </div>
         </div>
-    </div>`
+    </div>
+    `
     }).join(""))
 }
 generateShop()

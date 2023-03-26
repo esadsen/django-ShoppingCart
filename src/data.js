@@ -3,14 +3,14 @@ let shopItems=[{
     name:"Office Shirt",
     price:36,
     desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
-    img:"../images/img-2.jpg",
+    img:"{% static 'images/img-2.jpg' %}",
 },
 {
     id:"b",
     name:"Green Suit",
     price:200,
     desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
-    img:"../images/suit1.jpg",
+    img:"/images/suit1.jpg",
 },
 {
     id:"c",
