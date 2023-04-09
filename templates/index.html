@@ -22,11 +22,31 @@
         </a>
         
     </div>
-    <div class="shop" id="shop"></div>
+    <div class="shop" id="shop">
+        {%for items in item%}
+        <div id=product-id-{{items.id}} class="item">
+            <img width="220" height="240" src="{{items.img.url}}" alt="">
+            <div class="details">
+                <h3>{{items.name}}</h3>
+                <p>{{items.desc}}</p>
+                <div class="price-quantity">
+                    <h2>€ {{items.price}}</h2>
+                    <div class="buttons">
+                        <i onclick="" class="bi bi-dash-lg"></i>
+                        <div id={{items.id}} class="quantity">
+                       0
+                        </div>
+                        <i onclick="" class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
     
 </body>
 <script src="{% static 'data.js' %}"></script>
-<script src="{% static 'main.js' %}"></script>
+<script src="{% static 'maiin.js' %}"></script>
 
 </html>
 <!--
