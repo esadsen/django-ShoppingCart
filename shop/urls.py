@@ -19,11 +19,11 @@ from django.conf import settings
 from items import views
 from django.conf.urls.static import static
 
-app_name="items"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name="index"),
+    path('items/',include("items.urls")),
     path('user/',include("user.urls")),
     path('cart/', views.cart,name="cart"),
 ]
